@@ -1,0 +1,70 @@
+          .viewer { display: block; }
+          .archive-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--line);
+            font-family: "Consolas", "SFMono-Regular", monospace;
+            font-size: 12px;
+            color: var(--ink-dim);
+          }
+          .archive-toolbar .archive-count { color: var(--blue-2); }
+          .archive-tree {
+            max-height: 62vh;
+            overflow: auto;
+            padding: 6px 4px 14px;
+            font-family: "Consolas", "SFMono-Regular", monospace;
+            font-size: 12.5px;
+          }
+          .archive-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            cursor: default;
+            white-space: nowrap;
+            border-radius: 2px;
+          }
+          .archive-row.is-dir { cursor: pointer; color: var(--ink); }
+          .archive-row.is-dir:hover { background: var(--paper-2); }
+          .archive-row.is-file { color: var(--ink-dim); }
+          .archive-row.is-file:hover { background: var(--paper-2); color: var(--ink); }
+          .archive-row .archive-icon { flex: 0 0 auto; opacity: 0.85; }
+          .archive-row .archive-name { flex: 0 1 auto; overflow: hidden; text-overflow: ellipsis; }
+          .archive-row .archive-size { margin-left: auto; flex: 0 0 auto; color: var(--mono-dim); font-size: 11px; padding-left: 12px; }
+          .archive-row .archive-actions { flex: 0 0 auto; display: none; gap: 10px; padding-left: 12px; }
+          .archive-row.is-file:hover .archive-actions { display: flex; }
+          .archive-row .archive-actions a { color: var(--blue-2); font-size: 11px; text-decoration: none; }
+          .archive-row .archive-actions a:hover { text-decoration: underline; }
+          .archive-children { display: block; }
+          .archive-children.collapsed { display: none; }
+          #ae-archive-preview-modal {
+            display: none;
+            position: fixed; inset: 0; z-index: 999;
+            background: rgba(5,8,16,0.78);
+            align-items: center; justify-content: center;
+            padding: 24px;
+          }
+          #ae-archive-preview-modal .modal-frame {
+            position: relative;
+            background: var(--paper);
+            border: 1px solid var(--line-strong);
+            max-width: 92vw; max-height: 88vh;
+            width: 860px;
+            display: flex; flex-direction: column;
+          }
+          #ae-archive-preview-modal .modal-head {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 10px 14px; border-bottom: 1px solid var(--line);
+            font-family: "Consolas", "SFMono-Regular", monospace; font-size: 12px; color: var(--ink-dim);
+          }
+          #ae-archive-preview-modal .modal-close { cursor: pointer; color: var(--ink-dim); font-size: 18px; line-height: 1; padding: 0 4px; }
+          #ae-archive-preview-modal .modal-close:hover { color: var(--ink); }
+          #ae-archive-preview-modal .modal-body { overflow: auto; padding: 14px; flex: 1; }
+          #ae-archive-preview-modal .modal-body img { max-width: 100%; display: block; margin: 0 auto; }
+          #ae-archive-preview-modal .modal-body pre {
+            white-space: pre-wrap; word-break: break-all; color: var(--ink);
+            font-family: "Consolas", "SFMono-Regular", monospace; font-size: 12.5px; margin: 0;
+          }

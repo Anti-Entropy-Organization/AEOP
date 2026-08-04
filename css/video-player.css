@@ -1,0 +1,15 @@
+          .viewer { display: block; }
+          .file-info {
+            margin: 0 !important;
+            padding: 0 !important;
+            border-top: none !important;
+            color: var(--mono-dim) !important;
+            font-family: "Consolas", "SFMono-Regular", monospace !important;
+            font-size: 11px !important;
+            line-height: 1.45 !important;
+            text-align: left !important;
+            word-break: break-all !important;
+          }
+          @media (max-width: 900px) {
+            .file-info { flex-basis: 100% !important; }
+          }

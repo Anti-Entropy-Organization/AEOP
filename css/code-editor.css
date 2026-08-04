@@ -1,0 +1,5 @@
+      html, body { height: 100%; }
+      .container { display: flex; flex-direction: column; height: calc(100vh - 62px); }
+      .header-bar, .title-row, .file-info, .back-btn { flex: none; }
+      .editor-frame { flex: 1 1 auto; min-height: 280px; margin: 4px 0 10px; display: flex; flex-direction: column; }
+      .editor-shell { flex: 1 1 auto; min-height: 0; height: auto; }

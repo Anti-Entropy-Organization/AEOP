@@ -1,0 +1,8 @@
+      #adobe-dc-view.ae-pdf-fullscreen {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2147483647;
+        background: #1e1e1e;
+      }
